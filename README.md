@@ -17,11 +17,11 @@ This script finds the energy capacity and logs to a local file with the unix tim
 2. add aliases file
 3. add batlog to crontab file to be run at restart 
 
-##
+## Additional script files
 
 bash file| comment
 ---|---|
-fix_screen.sh| Fix scren tearing on thinkpads with mate(20.04)
+fix_screen.sh| Fix screen tearing on thinkpads with mate(20.04)
 
 ## TODO
 
