@@ -23,10 +23,21 @@ bash file| comment
 ---|---|
 fix_screen.sh| Fix screen tearing on thinkpads with mate(20.04)
 
+## Custom shortcuts - using key binds
+
+`dconf dump /` will show current keybinds. Following shortcuts are added,
+
+- win+R : for tts of selected text
+- ctrl+left : previous tab in terminal
+- ctrl+Right : Next tab in terminal
+
+
 ## TODO
 
 - [x] local battery capacily logging
 - [x] bash_rc scripts with git configs
 - [x] init script to deploy 
 - [ ] mqtt publisher script
-- [ ] auto add shortcuts 
+- [x] auto add shortcuts 
+- [x] TTS from clipboard
+
