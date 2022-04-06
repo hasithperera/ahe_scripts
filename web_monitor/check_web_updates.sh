@@ -29,7 +29,10 @@ updated_lines=$(diff old.vals new.vals --unchanged-line-format="" --new-line-for
 for l in $updated_lines;
 do	
 	#process links with differences
-	cut links.txt -d "," -f 1 | head -n $l|tail -n 1
+
+
+	link=$(cut links.txt -d "," -f 1 | head -n $l|tail -n 1)
+	./email.sh $link
 done
 
 #update checksums
