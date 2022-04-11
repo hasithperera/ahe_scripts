@@ -9,14 +9,22 @@ do
 	#echo $num
 	lnk=$(head links.txt -n $num|cut -d ',' -f 1 | tail -n 1)
 	lnk_lim=$(head links.txt -n $num|cut -d ',' -f 2 | tail -n 1)
-	
+	lnk_tail=$(head links.txt -n $num|cut -d ',' -f 3 | tail -n 1)	
 	#echo "$num: $lnk :: $lnk_lim"
 	
 	if [[ $lnk_lim -gt 0 ]];
 	then
-		curl -s $lnk| head -n $lnk_lim | sha256sum | cut -d ' ' -f 1 >> new.vals
+		if [[ $lnk_tail -gt 0 ]];
+		then
+			echo "h-t"
+			curl -s $lnk| head -n $lnk_lim|tail -n $lnk_tail | sha256sum | cut -d ' ' -f 1 >> new.vals
+		else
+			echo "h"
+			curl -s $lnk| head -n $lnk_lim | sha256sum | cut -d ' ' -f 1 >> new.vals
 		#curl -s $lnk
+		fi
 	else
+		echo "a"
 		curl -s $lnk| sha256sum | cut -d ' ' -f 1 >> new.vals
 	
 	fi
