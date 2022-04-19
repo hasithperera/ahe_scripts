@@ -1,0 +1,9 @@
+nmap net-tools
+mosquitto-clients
+pavucontrol
+octave
+python3 
+python3-pip
+xsel
+festival
+xclip
