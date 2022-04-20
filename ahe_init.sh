@@ -10,6 +10,8 @@ dconf load / < ./key_binds.conf
 mkdir ~/in
 mkdir ~/Projects
 
+# copy vimrc for the current user
+cp .vimrc ~/.vimrc
 
 # add battery logging script to crontab
 
