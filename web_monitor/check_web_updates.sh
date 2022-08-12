@@ -16,15 +16,15 @@ do
 	then
 		if [[ $lnk_tail -gt 0 ]];
 		then
-			echo "h-t"
+			#echo "h-t"
 			curl -s $lnk| head -n $lnk_lim|tail -n $lnk_tail | sha256sum | cut -d ' ' -f 1 >> new.vals
 		else
-			echo "h"
+			#echo "h"
 			curl -s $lnk| head -n $lnk_lim | sha256sum | cut -d ' ' -f 1 >> new.vals
 		#curl -s $lnk
 		fi
 	else
-		echo "a"
+		#echo "a"
 		curl -s $lnk| sha256sum | cut -d ' ' -f 1 >> new.vals
 	
 	fi
