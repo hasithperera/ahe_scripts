@@ -5,6 +5,11 @@ cp .bash_aliases ~/
 cat .ahe_bashrc >> ~/.bashrc
 chmod 755 ~/.bash_aliases
 
+#install festival and xsel
+apt update
+apt install festival xsel -y
+
+
 #custom key binds for tab switching
 dconf load / < ./key_binds.conf
 mkdir ~/in
