@@ -7,7 +7,7 @@ chmod 755 ~/.bash_aliases
 
 #install festival and xsel
 apt update
-apt install festival xsel -y
+apt install festival xsel vim -y
 
 
 #custom key binds for tab switching
@@ -32,7 +32,7 @@ if [[ $lap_model -gt 0 ]];
 then
 	echo "Add think pad battery controls"
 	echo 40 | sudo tee /sys/class/power_supply/BAT1/charge_start_threshold
-	echo 80 | sudo tee /sys/class/power_supply/BAT1/charge_start_threshold
+	echo 80 | sudo tee /sys/class/power_supply/BAT1/charge_stop_threshold
 else
 	echo "Not a Thinkpad"
 fi
@@ -46,4 +46,11 @@ white='\e[0;37m'
 yellow='\e[0;33m'
 echo -e "${yellow} "; crontab -l
 echo -e "${white}"
+
+## configure GIT global settings 
+git config --global user.name "Hasith Perera"
+git config --global user.email "12579141+hasithperera@users.noreply.github.com"
+
+
+
 echo "End of script"
