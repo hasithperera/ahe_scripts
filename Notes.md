@@ -20,3 +20,11 @@ To hide files from git. useful when you have config files with apikeys or other 
 ### Replace 
 
 Equalent to the syntax used in sed. Use `:%s/<find>/<replace>/g`
+
+### remove spaces
+
+after selecting using virtual mode `:left` removes leading white space.
+Needed to use this to format summary from grep to an .md table
+
+
+

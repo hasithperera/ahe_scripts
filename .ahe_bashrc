@@ -1,5 +1,0 @@
-# AHE modification for git
-PS1=$(echo $PS1| sed 's/\\\$/$(__git_ps1)\\$/g')
-
-# add .bash_alises file
-~/.bash_aliases
