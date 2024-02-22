@@ -12,8 +12,6 @@ gimp
 inkscape
 gnome-disk-utility
 
-# c
-build-essentials
 python3
 cmake
 gnuplot
